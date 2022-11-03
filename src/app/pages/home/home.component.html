@@ -1,0 +1,25 @@
+<h2>Productos</h2>
+<div>
+    <div *ngIf="loading" id="loading">
+        Cargando...
+    </div>
+    <div *ngIf="!loading">
+        <div *ngFor="let producto of productos">
+            <mat-card class="product-card">
+                <mat-card-title-group>
+                  <mat-card-title>{{producto.title}}</mat-card-title>
+                  <mat-card-subtitle>{{producto.currency_id}}  $ {{ producto.price}}</mat-card-subtitle>
+                  <img mat-card-sm-image src={{producto.thumbnail}} >
+                </mat-card-title-group>
+                <mat-card-content>
+                    <button mat-raised-button color="secondary" routerLink="/productos/{{producto.id}}" >Ver más</button>
+                    <button mat-raised-button color="warn" id="right" >Comprar</button>
+                </mat-card-content>
+              </mat-card>
+              <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>
+
+
+

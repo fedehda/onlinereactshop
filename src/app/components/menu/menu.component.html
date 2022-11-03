@@ -1,0 +1,18 @@
+<div class="menu">
+    <h1 routerLink="/">Tienda Online Angular</h1>
+    
+    <section>
+    <button mat-fab color="warn" aria-label="Example icon button with a home icon" routerLink="/">
+        <mat-icon>home</mat-icon>
+      </button>
+
+        <button mat-raised-button color="primary" routerLink="/login" >Acceder</button>
+        <button mat-raised-button color="accent" routerLink="/signup">Registrarse</button>
+
+
+        <div class="dropdown-content">
+            <app-login></app-login>
+            <a routerLink="/signup">Darse de alta</a>  
+            </div>
+        </section>
+</div>

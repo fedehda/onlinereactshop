@@ -1,0 +1,29 @@
+<h3>Loguearse</h3>
+<form [formGroup]="myForm" (ngSubmit)="login()">
+
+<div>
+    <div>
+        <label>Correo: </label>
+        <input type="email" formControlName="email"
+        [ngClass]="{error:myForm.get('email')?.hasError('required') && myForm.get('email')?.dirty,warning:myForm.get('email')?.hasError('minlength')}"
+        >
+
+    </div>
+
+    <div>
+        <label>Contraseña: </label>
+        <input type="password" formControlName="password"
+        [ngClass]="{error:myForm.get('password')?.hasError('required') && myForm.get('password')?.dirty,warning:myForm.get('password')?.hasError('minlength')}"
+        >
+        <div *ngIf="myForm.get('password')?.errors && myForm.get('password')?.dirty">
+            <p *ngIf="myForm.get('password')?.hasError('minlength')">Debe tener entre 6 y 10 caracteres</p>
+            
+        </div>
+
+    </div>
+        <button type="submit">Iniciar sesión</button>
+
+    </div>
+
+</form>
+

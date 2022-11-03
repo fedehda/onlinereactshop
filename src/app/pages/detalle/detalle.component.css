@@ -1,0 +1,27 @@
+.details-card{
+    max-width: 600px;
+    position: relative;
+    top: 50%;
+
+}
+#right{
+    float:right;
+    right: 10%;
+}
+
+.thumbnail-img{
+    right: 10px;
+}
+
+.mat-card-header{
+    left:50px;
+    align-items: flex-end;
+
+}
+.mat-card-content{
+    text-align: center;
+    font-weight: bolder;
+    font-size: medium;
+    
+    
+}

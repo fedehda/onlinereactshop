@@ -1,0 +1,12 @@
+#loading{
+    text-align: center;    
+}
+.example-card {
+    max-width: 500px;
+    margin-bottom: 8px;
+    border-bottom: 100ch;
+    border-inline-end-color: black;
+  }
+.mat-divider{
+    max-width: 500px;
+}
